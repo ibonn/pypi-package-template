@@ -1,0 +1,11 @@
+{% if cookiecutter.license == 'MIT' %}
+MIT LICENSE
+{% elif cookiecutter.license == 'BSD-3' %}
+BSD 3 CLAUSE LICENSE
+{% elif cookiecutter.license == 'GNU GPL v3.0' %}
+GPL 3.0 LICENSE
+{% elif cookiecutter.license == 'GNU LGPL v3.0' %}
+LGPL 3.0 LICENSE
+{% elif cookiecutter.license == 'Apache Software License 2.0' %}
+APACHE 2.0 LICENSE
+{% endif %}

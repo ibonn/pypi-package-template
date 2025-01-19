@@ -1,0 +1,35 @@
+{% if cookiecutter.backend == 'Hatchling' %}
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+{% elif cookiecutter.backend == 'setuptools' %}
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+{% elif cookiecutter.backend == 'Flit' %}
+[build-system]
+requires = ["flit_core>=3.4"]
+build-backend = "flit_core.buildapi"
+{% elif cookiecutter.backend == 'PDM' %}
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+{% endif %}
+[project]
+name = "{{ cookiecutter.package_name }}"
+version = "0.0.1"
+authors = [
+  { name="{{ cookiecutter.author }}", email="{{ cookiecutter.email }}" },
+]
+description = "{{ cookiecutter.package_description }}"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "{{ 'MIT' if cookiecutter.license == 'MIT' else 'GPL-3.0-only' if cookiecutter.license == 'GNU GPL v3.0' else 'LGPL-3.0-only' if cookiecutter.license == 'GNU LGPL v3.0' else 'Apache-2.0' }}"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "{{ cookiecutter.homepage }}"
