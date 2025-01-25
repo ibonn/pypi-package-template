@@ -2,6 +2,9 @@
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "{{ cookiecutter.package_name }}/__init__.py"
 {% elif cookiecutter.backend == 'setuptools' %}
 [build-system]
 requires = ["setuptools>=61.0"]
@@ -22,6 +25,7 @@ authors = [
   { name="{{ cookiecutter.author }}", email="{{ cookiecutter.email }}" },
 ]
 description = "{{ cookiecutter.package_description }}"
+dependencies = []
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
