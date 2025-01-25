@@ -3,6 +3,13 @@
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[dependency-groups]
+{% if cookiecutter.tests == 'pytest' %}
+test = ["pytest", "coverage"]
+{% elif cookiecutter.tests == 'unittest' %}
+test = ["coverage"]
+{% endif %}
+
 [tool.hatch.version]
 path = "{{ cookiecutter.package_name }}/__init__.py"
 {% elif cookiecutter.backend == 'setuptools' %}

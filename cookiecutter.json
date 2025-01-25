@@ -3,6 +3,7 @@
     "package_description": "This is a test package",
     "license": ["MIT", "BSD-3", "GNU GPL v3.0", "GNU LGPL v3.0", "Apache Software License 2.0"],
     "backend": ["Hatchling", "setuptools", "Flit", "PDM"],
+    "tests": ["pytest", "unittest"],
     "author": null,
     "email": null,
     "homepage": null
