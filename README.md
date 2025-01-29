@@ -25,13 +25,21 @@ cookiecutter gh:ibonn/pypi-package-template
 This will prompt you for basic information like package name, description, license, etc. and generate a ready-to-use directory structure.
 
 ## Publishing to PyPI
-1. Make sure your code is ready and versioned
-2. Create a tag on GitHub
+1. Create an account on [PyPI](https://pypi.org/) and [TestPyPI](https://test.pypi.org/)
+2. Add the package publishers on both sites ([PyPI](https://pypi.org/manage/account/publishing/) and [TestPyPI](https://test.pypi.org/manage/account/publishing/))
+    * **PyPI project name:** _Your package name_
+    * **Owner:** _Your GitHub username/organization name_
+    * **Repository name:** _Your repository name_
+    * **Workflow name:** pypi-publish.yml
+    * **Environment name:** Leave it empty
+
+3. Make sure your code is ready and versioned
+4. Create a tag on GitHub
     ```
     git tag v0.1.0
     git push origin v0.1.0
     ```
-3. GitHub Actions will automatically build and publish the package to PyPI
+5. GitHub Actions will automatically build and publish the package to PyPI
 
 ## Customization
 You can modify the files within the template to suit your needs. The GitHub Actions configuration is located in `.github/workflows/`
