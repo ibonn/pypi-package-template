@@ -1,15 +1,15 @@
 # PyPI Package Cookiecutter Template
 
-This repository provides a Cookiecutter template for creating Python packages ready to be uploaded to PyPI. It includes integration with GitHub Actions to run tests and automatically publish new versions to PyPI.
+This repository provides a Cookiecutter template for creating Python packages ready to be uploaded to PyPI. It includes integration with GitHub Actions to automatically publish new versions to PyPI.
 
 ## Features
 * Standard Python package structure
 * Automatic GitHub Actions setup for:
-    * Running tests with pytest/unittest
     * Building and uploading packages to PyPI when a new tag is created
 
 * Configuration with pyproject.toml
 * Support for common licenses and README
+* Support for unittest/pytest
 
 ## Installation
 First, install Cookiecutter if you haven't already:
